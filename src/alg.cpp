@@ -6,17 +6,15 @@
 #include <string>
 #include  "bst.h"
 
-using namespace std;
-
 BST<std::string> makeTree(const char* filename) {
-    BST<string> tree;
-    ifstream fin(filename);
+    BST<std::string> tree;
+    std::ifstream fin(filename);
     bool flag = 0;
     int count = 0;
     while (!flag) {
-        string word;
-        string temp;
-        getline(fin, temp);
+        std::string word;
+        std::string temp;
+        std::getline(fin, temp);
         if (temp == "") {
             count++;
             if (count == 20) {
@@ -47,4 +45,4 @@ BST<std::string> makeTree(const char* filename) {
         }
     }
     return tree;
-} 
+}
