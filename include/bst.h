@@ -2,11 +2,9 @@
 #ifndef INCLUDE_BST_H_
 #define INCLUDE_BST_H_
 #include<iostream>
-using namespace std;
 template<typename T>
-class BST
-{
-public:
+class BST {
+ public:
     struct Node {
         T value;
         int count;
@@ -14,7 +12,7 @@ public:
         Node* right;
     };
 
-    BST(): root(nullptr) {};
+    BST(): root(nullptr) {}
 
     void add(T value) {
         root = addNode(root, value);
@@ -28,7 +26,7 @@ public:
         return searchNode(root, value);
     }
 
-private:
+ private:
     Node* root;
 
     Node* addNode(Node* root, T value) {
