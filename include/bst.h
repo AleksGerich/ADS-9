@@ -60,6 +60,7 @@ private:
         if (root->value == value) {
             return root->count;
         }
+        return 0;
     }
 
     int depthNode(Node* root) {
@@ -77,6 +78,7 @@ private:
         if (left <= right) {
             return right + 1;
         }
+        return 0;
     }
 };
 #endif  // INCLUDE_BST_H_
